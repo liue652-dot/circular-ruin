@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: serif;
+  overflow: hidden;
+}
+
+.screen {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  background-image: url("northimg/facesbig.png"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hidden {
+  display: none;
+}
+
+.glow {
+  padding: 20px 30px;
+  color: #ffffff;
+  position: relative;
+
+  background: radial-gradient(
+    ellipse
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0.7) 0%,
+    rgba(255,255,255,0.4) 55%,
+    rgba(255,255,255,0.15) 70%,
+    rgba(255,255,255,0.05) 100%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  backdrop-filter: blur(2px);
+}
+
+.side-text {
+  position: absolute;
+  right: 60px;
+  top: 80px;
+  width: 300px;
+}
+
+#faceTrigger {
+  position: absolute;
+  top: 42%;
+  left: 32%;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#faceTrigger:hover {
+  box-shadow: 0 0 25px rgba(255,255,255,0.9),
+              0 0 50px rgba(255,255,255,0.6),
+              0 0 80px rgba(255,255,255,0.4);
+  transform: scale(1.8);
+}
+
+
+@keyframes shift {
+  from { transform: translateX(0); }
+  to { transform: translateX(5px); }
+}
+
+.center-box {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+button {
+  margin: 6px;
+  padding: 6px 15px;
+  font-family: serif;
+  cursor: pointer;
+
+  background: none;
+  border: none;          
+  outline: none;         
+  box-shadow: none;     
+  color: #ffffff; 
+}
+
+button:focus {
+  outline: none;
+}
+
+
+.left-block {
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  width: 280px;
+  text-align: left;
+}
+
+.small {
+  position: absolute;
+  cursor: pointer;
+}
+
+.welcome {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+a:hover {
+  cursor: pointer;
+}
+

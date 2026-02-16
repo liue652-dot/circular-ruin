@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  padding: 2rem;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant', serif;
+  overflow: hidden;
+  flex-direction: column;
+
+  background:
+    linear-gradient(rgba(78, 78, 78, 0.1), rgba(255,255,255,0.3)),
+    url('homeimg/fieldwhite.png') center/cover no-repeat;
+
+  transition: background 2.5s ease-in-out;
+}
+
+body.loaded h1 {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.page-link:hover {
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+}
+
+.center-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 12px 30px;
+  font-family: 'Cormorant', serif;
+  font-size: 18px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.center-btn:hover {
+  opacity: 0.8;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+a {
+  text-decoration: none;   
+  color: black;         
+}

@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  font-family: serif;
+  background: white; 
+}
+
+.scene {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 2.5s ease; 
+}
+
+.scene.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.angel-inside {
+  position: absolute;
+  inset: 0;
+  width: 70%;        
+  height: 210%;      
+  object-fit: cover;
+  object-position: center 60%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.mirror-full {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.black {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-block {
+  max-width: 600px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 3s ease; 
+}
+
+.angel-full {
+  position: absolute;
+  inset: 0;
+  width: 120%;       
+  height: 270%;      
+  object-fit: cover;
+  transition: filter 5s ease; 
+}
+
+#angelScene {
+  transition: none !important;
+}
+
+.white-fade {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 5s ease;
+  z-index: 5; 
+}
+
+.menu {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;            
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 22px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 2s ease;
+  z-index: 20;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.a {
+    text-decoration: none;
+}

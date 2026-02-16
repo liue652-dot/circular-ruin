@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  background: #e6e6e6;
+  overflow: hidden;
+  font-family: serif;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  animation: warmShift 18s ease forwards;
+}
+
+.base {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayWrap {
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  bottom: -30%;
+  opacity: 0;
+
+  animation: rise 18s ease forwards;
+}
+
+.overlay {
+  width: 100%;
+  display: block;
+  filter: blur(1.5px);
+
+  animation: heartbeat 4s ease-in-out infinite 18s;
+}
+
+@keyframes rise {
+  0% {
+    bottom: -30%;
+    opacity: 0.05;
+  }
+  100% {
+    bottom: 0%;
+    opacity: 0.9;
+  }
+}
+
+/* Subtle pulse */
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.025); }
+  40%  { transform: scale(1); }
+  60%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.redwash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(150, 0, 0, 0.3) 0%,
+    rgba(90, 0, 0, 0.65) 100%
+  );
+
+  opacity: 0;
+  animation: redden 18s ease forwards;
+}
+
+@keyframes redden {
+  0%   { opacity: 0; }
+  100% { opacity: 0.75; }
+}
+
+@keyframes warmShift {
+  0%   { filter: none; }
+  100% { filter: sepia(0.4) saturate(1.4) hue-rotate(-20deg); }
+}
+
+.text {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0;
+  transition: opacity 4s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+.topWords {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;   
+  pointer-events: none;  
+}
+
+.word {
+  position: absolute;
+  color: white;              
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;     
+  opacity: 0;
+  transition: opacity 4s ease, text-shadow 0.6s ease;
+  pointer-events: auto;
+}
+
+.word:visited {
+  color: white;
+}
+
+
+.w1 { top: 35%; left: 15%; }
+.w2 { top: 25%; right: 15%; }
+.w3 { top: 45%; left: 40%; }
+.w4 { top: 18%; right: 35%; }
+.w5 { top: 57%; left: 70%; }
+.w6 { top: 65%; left: 25%; }
+
+
+.word:hover {
+  text-shadow: 0 0 20px rgba(255,255,255,0.7);
+}

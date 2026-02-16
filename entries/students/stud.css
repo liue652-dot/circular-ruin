@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant', serif;
+  font-size: 13px;
+  background: #000;
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.oval-glow {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 750px;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center,
+    rgba(255,255,255,0.9) 0%,
+    rgba(255,255,255,0.7) 40%,
+    rgba(255,255,255,0.4) 65%,
+    rgba(255,255,255,0.15) 90%,
+    rgba(255,255,255,0) 100%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.center-text {
+  position: absolute;
+  bottom: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 51%;
+  text-align: center;
+  line-height: 1.3;
+  color: #1a1a1a;
+}
+
+.floating-text {
+  position: absolute;
+  font-size: 16px;
+}
+
+.floating-text a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.floating-text a:hover {
+  opacity: 0.6;
+}
+
+.floating-text .glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 220%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center,
+    rgba(255,255,255,0.9) 0%,
+    rgba(255,255,255,0.6) 40%,
+    rgba(255,255,255,0.3) 65%,
+    rgba(255,255,255,0) 80%);
+  filter: blur(25px);
+  pointer-events: none;
+}

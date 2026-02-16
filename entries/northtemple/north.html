@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>North Temple</title>
+  <link rel="stylesheet" href="north.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <audio id="bg-music" autoplay loop>
+  <source src="audio/north.m4a" type="audio/mpeg">
+  </audio>
+
+  <div id="intro" class="screen">
+    <div class="glow side-text">
+      To enter, find the one that glows.
+      <br><br>
+      Be sure to make the right choice after entry...
+    </div>
+
+    <div id="faceTrigger"></div>
+  </div>
+
+  <div id="question" class="screen hidden">
+    <div class="glow center-box">
+      <p>Who brought you here?</p>
+      <button onclick="checkAnswer('dream')">Dreamed Man</button>
+      <button onclick="checkAnswer('phantom')">Phantom</button>
+    </div>
+  </div>
+
+  <div id="temple" class="screen hidden">
+
+    <div class="glow left-block">
+      He commands the dreamed man to travel to another ruined temple
+      downstream whose pyramids still stand, so some voice might glorify him there.
+      He educates the dreamed son for two years before sending him off,
+      erasing his memory of training so he will think himself a real man.
+    </div>
+
+    <a href="../phantom/phan.html" class="glow small" style="top:18%; left:60%;">Phantom</a>
+    <a href="../circtemple/circ1.html" class="glow small" style="top:40%; left:55%;">Circular Temple</a>
+    <a href="../fire/fire.html" class="glow small" style="top:60%; left:68%;">Fire</a>
+    <a href="../heart/heart.html" class="glow small" style="top:75%; left:52%;">Heart</a>
+    <a href="../buildman/man1.html" class="glow small" style="top:55%; left:34%;">Dreamed Man</a>
+    <a href="../students/stud.html" class="glow small" style="top:70%; left:22%;">Student</a>
+
+
+    <div class="glow welcome">Welcome.</div>
+
+  </div>
+
+  <script src="north.js"></script>
+</body>
+</html>

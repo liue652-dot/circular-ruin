@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cormorant', serif;
+  overflow: hidden;
+
+  cursor: pointer; 
+  background:
+    linear-gradient(rgba(78, 78, 78, 0.1), rgba(255,255,255,0.3)),
+    url('homeimg/field.jpg') center/cover no-repeat;
+
+  transition: background 2.5s ease-in-out;
+}
+
+h1 {
+  color: white;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 600;
+  text-shadow: 0 0 50px rgba(255,255,255,0.6);
+
+  transform: scale(0.3);
+  opacity: 0;
+
+  transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+body.loaded h1 {
+  transform: scale(1);
+  opacity: 1;
+}
+
